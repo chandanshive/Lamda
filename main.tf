@@ -45,4 +45,6 @@ resource "aws_lambda_function" "lambda" {
       greeting = "Hello"
     }
   }
+
+  kms_key_arn = "<valid_kms_key_arn>"
 }
