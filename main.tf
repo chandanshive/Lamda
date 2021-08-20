@@ -45,4 +45,9 @@ resource "aws_lambda_function" "lambda" {
       greeting = "Hello"
     }
   }
+
+  vpc_config {
+    security_group_ids = ["<valid_security_group_ids>"]
+    subnet_ids         = ["<valid_subnet_ids>"]
+  }
 }
