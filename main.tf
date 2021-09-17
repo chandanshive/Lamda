@@ -45,4 +45,15 @@ resource "aws_lambda_function" "lambda" {
       greeting = "Hello"
     }
   }
+
+  tracing_config {
+    mode = "Active"
+  }
+
+  vpc_config {
+    security_group_ids = ["<valid_security_group_ids>"]
+    subnet_ids         = ["<valid_subnet_ids>"]
+  }
+
+  kms_key_arn = "<valid_kms_key_arn>"
 }
